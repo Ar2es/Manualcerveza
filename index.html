@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual Interactivo de Cerveza</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Robot guía -->
+  <div id="robot-container">
+    <img src="robot.png" alt="Robot guía" id="robot">
+  </div>
+
+  <!-- Encabezado -->
+  <header class="header">Manual Interactivo para el Proceso de Cerveza</header>
+
+  <!-- Contenido -->
+  <div class="container" id="container">
+    <!-- Sección 1: Portada -->
+    <section class="section">
+      <div class="contenido">
+        <h1>¡Bienvenido al Manual Interactivo!</h1>
+        <p>Explora el proceso de elaboración de cerveza paso a paso.</p>
+        <button onclick="irSeccion(1)">Comenzar</button>
+      </div>
+    </section>
+
+    <!-- Sección 2: NOMS -->
+    <section class="section">
+      <div class="contenido">
+        <h2>NOMs Relacionadas</h2>
+        <ul>
+          <li><strong>NOM-142:</strong> Especificaciones sanitarias para bebidas alcohólicas.</li>
+          <li><strong>NOM-251:</strong> Higiene en procesos alimenticios.</li>
+        </ul>
+        <button onclick="irSeccion(2)">Siguiente</button>
+      </div>
+    </section>
+
+    <!-- Sección 3: Etapas -->
+    <section class="section">
+      <div class="contenido">
+        <h2>Etapas del Proceso</h2>
+        <p>Aquí aprenderás sobre la maceración, cocción, fermentación y más.</p>
+        <button onclick="irSeccion(3)">Siguiente</button>
+      </div>
+    </section>
+
+    <!-- Sección 4: Quiz -->
+    <section class="section">
+      <div class="contenido">
+        <h2>Quiz Final</h2>
+        <div id="quiz-container"></div>
+        <div id="quiz-resultado"></div>
+      </div>
+    </section>
+
+    <!-- Sección 5: Felicitaciones -->
+    <section class="section">
+      <div class="contenido">
+        <h2>¡Completado!</h2>
+        <p>Has terminado el recorrido. 🎉 ¡Felicidades!</p>
+        <button onclick="irSeccion(0)">Volver al inicio</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
