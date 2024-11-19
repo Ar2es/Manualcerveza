@@ -24,6 +24,17 @@ function evaluarQuiz() {
 
   const resultado = document.getElementById("quiz-resultado");
   resultado.innerHTML = `<p>Tu puntuación es ${puntuacion}/3.</p>`;
+
+  if (puntuacion === 3) {
+    resultado.innerHTML += `<button onclick="irSeccion(6)">Siguiente</button>`;
+  } else {
+    resultado.innerHTML += `<button onclick="reiniciarQuiz()">Reintentar</button>`;
+  }
+}
+
+function reiniciarQuiz() {
+  document.getElementById("quiz-container").innerHTML = quizHTML;
+  document.getElementById("quiz-resultado").innerHTML = "";
 }
 
 const quizHTML = `
@@ -46,3 +57,8 @@ const quizHTML = `
 `;
 
 document.getElementById("quiz-container").innerHTML = quizHTML;
+
+// Bloquea el scroll manual en la página
+window.addEventListener('scroll', (e) => {
+  window.scrollTo(0, 0);
+});
