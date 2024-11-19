@@ -1,11 +1,11 @@
 /* Estilo general */
+/* Estilo general */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: #121212;
   color: #fff;
-  overflow: hidden; /* Elimina el scroll */
+  overflow: hidden; /* Elimina barras de desplazamiento */
 }
 
 .header {
@@ -35,7 +35,9 @@ body {
   align-items: center;
   text-align: center;
   padding: 20px;
-  position: relative;
+  background-size: cover; /* Asegura que las imágenes ocupen toda la sección */
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .contenido {
@@ -47,28 +49,28 @@ body {
 }
 
 /* Fondos personalizados */
-.section:nth-child(2) { /* NOMs */
-  background: url('noms.jpg') no-repeat center center / cover;
+.section:nth-child(2) {
+  background-image: url('noms.jpg');
 }
 
-.section:nth-child(3) { /* Macerado */
-  background: url('macerado.jpg') no-repeat center center / cover;
+.section:nth-child(3) {
+  background-image: url('macerado.jpg');
 }
 
-.section:nth-child(4) { /* Cocción */
-  background: url('coccion.jpg') no-repeat center center / cover;
+.section:nth-child(4) {
+  background-image: url('coccion.jpg');
 }
 
-.section:nth-child(5) { /* Fermentación */
-  background: url('fermentacion.jpg') no-repeat center center / cover;
+.section:nth-child(5) {
+  background-image: url('fermentacion.jpg');
 }
 
-.section:nth-child(6) { /* Quiz */
-  background: url('quiz.jpg') no-repeat center center / cover;
+.section:nth-child(6) {
+  background-image: url('quiz.jpg');
 }
 
-.section:nth-child(7) { /* Final */
-  background: url('final.jpg') no-repeat center center / cover;
+.section:nth-child(7) {
+  background-image: url('final.jpg');
 }
 
 /* Botones */
@@ -91,14 +93,9 @@ button:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  animation: bounce 2s infinite;
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+#robot-container img {
+  max-width: 150px;
+  transition: transform 0.5s ease-in-out; /* Efecto de cambio suave */
 }
